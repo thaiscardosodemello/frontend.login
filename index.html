@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login | FrontEnd Essencials</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <span>FRONT END ESSENCIALS</span>
+    <div class="glass">
+        <form action="/login" method="POST">
+            <h1>Login</h1>
+            <label for="usuario">Username:</label>
+            <input type="text" id="usuario" name="usuario" required placeholder="user@mail.com">
+    
+            <label for="senha">Password:</label>
+            <input type="password" id="senha" name="senha" required placeholder="******">
+    
+            <button type="submit">Entrar</button>
+        </form>        
+    </div>
+
+    <button  id="modeselection" onclick="toggleDarkMode()">Dark Mode</button>
+
+
+    <script>
+        const toggleDarkMode = () => {
+            document.body.classList.toggle('dark-mode');
+            document.querySelector('.glass').classList.toggle('dark-mode');
+            document.querySelectorAll('h1, label').forEach(el => el.classList.toggle('dark-mode'));
+            document.querySelectorAll('input').forEach(el => el.classList.toggle('dark-mode'));
+            document.querySelectorAll('button').forEach(el => el.classList.toggle('dark-mode'));
+            document.querySelector('button[type="submit"]').classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+</html>
